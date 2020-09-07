@@ -1,3 +1,10 @@
+*{
+ 
+  font-family: Roboto;
+
+
+}
+
 #container {
   text-align: center;
 
@@ -24,4 +31,34 @@
 
 #container a {
   text-decoration: none;
+}
+/******header toolbar************/
+
+ion-toolbar {
+    --color: #ffffff;
+    --background: #20527A;
+     height:50px;
+
+
+
+}
+
+.segment{
+  ion-segment-button{
+    
+    --background: #20527A;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+
+    
+    mix-blend-mode: normal;
+     --color:#ffff;
+      --background-checked: #20527A;
+
+      --color-checked: #DB5827;
+  }
+
 }

@@ -1,20 +1,47 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
+
+    <!-- Side menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-icon  (click)="CreateAuthentification()" name="person-circle" slot="end" size="large"></ion-icon>
   </ion-toolbar>
+
+<ion-toolbar class="segment">
+		<ion-segment  [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)">
+			
+			<ion-segment-button value="Stations"  layout="icon-start">
+				<ion-label>
+				
+				<ion-icon name="location" size="large"></ion-icon>
+				Stations</ion-label>
+			</ion-segment-button >
+
+			<ion-segment-button value="Itineraires"  layout="icon-start">
+				<ion-label><ion-icon name="watch" size="large"></ion-icon>Itineraires</ion-label>
+			</ion-segment-button >
+
+			<ion-segment-button value="Favoris"  layout="icon-start"  routerLink="/menu/home/favoris">
+				<ion-label><ion-icon name="heart" size="large"></ion-icon>Favoris</ion-label>
+			</ion-segment-button >
+
+		</ion-segment>
+	</ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content  class="ion-padding">
+<div class="Stations" *ngIf="selectedSegment =='Stations'">
+	
+   <ion-button color="danger" (click)="CreateAlarme()">Alarme</ion-button>
+</div>
+<div class="Itineraires" *ngIf="selectedSegment =='Itineraires'">
+	<h1>page d'Itineraires</h1>
+</div>
+<div class="Favoris" *ngIf="selectedSegment =='Favoris'">
+	<h1>Erreur</h1>
+</div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
 </ion-content>

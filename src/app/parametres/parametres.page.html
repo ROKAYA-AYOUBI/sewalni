@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Parametres</ion-title>
+
+    <!-- Side menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+<ion-toolbar class="segment">
+		<ion-segment  [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)">
+			
+			<ion-segment-button value="Stations"  layout="icon-start"  routerLink="/menu/home" >
+				<ion-label>
+			
+				<ion-icon name="location" size="large"></ion-icon>
+				Stations</ion-label>
+			</ion-segment-button >
+
+			<ion-segment-button value="Itineraires"  layout="icon-start"routerLink="/menu/home">
+				<ion-label><img src="../assets/image/it.png">Itineraires</ion-label>
+			</ion-segment-button >
+
+			<ion-segment-button value="Favoris"  layout="icon-start">
+				<ion-label><ion-icon name="heart" size="large"></ion-icon>Favoris</ion-label>
+			</ion-segment-button >
+
+		</ion-segment>
+</ion-toolbar>
+
+<ion-toolbar class="seg">
+		<ion-segment  [(ngModel)]="selectedSegment2" (ionChange)="segmentChanged($event)">
+			<ion-segment-button value="Profil"  layout="icon-start">
+				<ion-label>Profil</ion-label>
+			</ion-segment-button >
+
+			<ion-segment-button value="Ville"  layout="icon-start">
+				<ion-label>Ville</ion-label>
+			</ion-segment-button >
+
+			<ion-segment-button value="Langue"  layout="icon-start">
+				<ion-label>Langue</ion-label>
+			</ion-segment-button >
+
+			
+
+		</ion-segment>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content  class="ion-padding">
+<div class="Profil" *ngIf="selectedSegment2 =='Profil'">
+
+<div class="form">
+	<img src="../assets/image/addperson.png">
+  <ion-list lines="none">
+	  <ion-item>
+		  <ion-input type="text" placeholder="Changer votres nom d'utilisateur"></ion-input>
+	  </ion-item>
+	   <ion-item>
+		  <ion-input type="text" placeholder="Changer votres e-mail"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		  <ion-input type="password"  placeholder="Changer votre mot de passe"></ion-input>
+	  </ion-item>
+	   <ion-item>
+		  <ion-input type="password" placeholder="Confirmer votre nouveau mot de passe" disabled></ion-input>
+	  </ion-item>
+  </ion-list>
+  <div class="button">
+  	<ion-button  class="bt1">Confirmer</ion-button> 
+  	<ion-button  class="bt2">Annuler</ion-button> 
+  </div>
+</div> 
+
+</div>
+
+
+<div class="Ville" *ngIf="selectedSegment2 =='Ville'">
+
+ <ion-header > 
+		<ion-item>
+				<ion-icon name="search-circle" size="large" ></ion-icon>
+				<ion-label>Changer la ville</ion-label>
+	   </ion-item>
+	</ion-header>
+
+	<div class="checkbox">
+	 <ion-list  lines="none">
+		 <ion-item ><ion-label> Rabat  </ion-label><ion-checkbox checked="true"></ion-checkbox></ion-item>
+		 <ion-item ><ion-label>Casablanca</ion-label><ion-checkbox  checked="false"></ion-checkbox></ion-item>
+		 <ion-item ><ion-label>Tange</ion-label><ion-checkbox  checked="false"></ion-checkbox></ion-item>
+	 </ion-list>
+	</div>
+</div>
+
+
+
+<div class="Langue" *ngIf="selectedSegment2 =='Langue'">
+
+	<ion-header class="test"> 
+		<ion-item>
+				<ion-icon name="search-circle" size="large" ></ion-icon>
+				<ion-label>Changer la langue</ion-label>
+	   </ion-item>
+	</ion-header>
+
+	<div class="checkbox">
+	 <ion-list  lines="none">
+		 <ion-item ><ion-label> عربية  </ion-label><ion-checkbox checked="true"></ion-checkbox></ion-item>
+		 <ion-item ><ion-label>Français</ion-label><ion-checkbox  checked="false"></ion-checkbox></ion-item>
+		 <ion-item ><ion-label>English</ion-label><ion-checkbox  checked="false"></ion-checkbox></ion-item>
+	 </ion-list>
+	</div>
+
+ 
+
+</div>
+</ion-content>
+
+

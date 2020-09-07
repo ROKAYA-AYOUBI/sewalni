@@ -1,0 +1,67 @@
+
+<ion-header>
+	<ion-toolbar >
+		<ion-segment  [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)">
+			
+			<ion-segment-button value="Connecter"  layout="icon-start">
+				<ion-label>
+				
+				<ion-icon name="location" size="large"></ion-icon>
+				Connecter</ion-label>
+			</ion-segment-button >
+
+			<ion-segment-button value="inscriter"  layout="icon-start">
+				<ion-label><ion-icon name="watch" size="large"></ion-icon>S'inscriter</ion-label>
+			</ion-segment-button >
+
+		</ion-segment>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content  class="ion-padding">
+
+	<div class="Connecter" *ngIf="selectedSegment =='Connecter'">
+		<div class="form1">
+			<ion-list lines="none">
+			  <ion-item>
+				  <ion-input type="text" placeholder="Entrer votres nom d'utilisateur"></ion-input>
+			  </ion-item>
+			
+			  <ion-item>
+				  <ion-input type="password"  placeholder="Changer votre mot de passe"></ion-input>
+			  </ion-item>
+			  
+		  </ion-list>
+			<div class="button">
+			  	<ion-button  class="bt1">Confirmer</ion-button> 
+			</div>		
+		</div>
+	</div>
+	<div class="inscriter" *ngIf="selectedSegment =='inscriter'">
+		<div class="form2">
+			<ion-list lines="none">
+			  <ion-item>
+				  <ion-input type="text" placeholder="Entrer votres nom d'utilisateur"></ion-input>
+			  </ion-item>
+			  <ion-item>
+				  <ion-input type="email" placeholder="Entrer votres email"></ion-input>
+			  </ion-item>
+			
+			  <ion-item>
+				  <ion-input type="password"  placeholder="Changer votre mot de passe"></ion-input>
+			  </ion-item>
+
+			   <ion-item>
+				  <ion-input type="password"  placeholder="Confirmer votre mot de passe"></ion-input>
+			  </ion-item>
+			  
+		  </ion-list>
+			<div class="button">
+			  	<ion-button  class="bt1">Confirmer</ion-button> 
+			  	<ion-button  class="bt1">Annuler</ion-button> 
+			</div>		
+		</div>
+	
+	</div>
+</ion-content>
+

@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Parametres</ion-title>
+
+    <!-- Side menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+<ion-toolbar class="segment">
+		<ion-segment >
+			
+			<ion-segment-button value="Stations"  layout="icon-start"  routerLink="/menu/home" >
+				<ion-label>
+			
+				<ion-icon name="location" size="large"></ion-icon>
+				Stations</ion-label>
+			</ion-segment-button >
+
+			<ion-segment-button value="Itineraires"  layout="icon-start"routerLink="/menu/home">
+				<ion-label><img src="../assets/image/it.png">Itineraires</ion-label>
+			</ion-segment-button >
+
+			<ion-segment-button value="Favoris"  layout="icon-start"  routerLink="/menu/home/favoris">
+				<ion-label><ion-icon name="heart" size="large"></ion-icon>Favoris</ion-label>
+			</ion-segment-button >
+
+		</ion-segment>
+</ion-toolbar>
+
+<ion-toolbar class="seg">
+		<ion-segment  [(ngModel)]="selectedSegment2" (ionChange)="segmentChanged2($event)">
+			<ion-segment-button value="heart"  layout="icon-start">
+					<ion-icon name="heart" size="large"></ion-icon>
+			</ion-segment-button >
+
+			<ion-segment-button value="stations"  layout="icon-start">
+				<ion-label>stations</ion-label>
+			</ion-segment-button >
+
+			<ion-segment-button value="itineraires"  layout="icon-start">
+				<ion-label>itineraires</ion-label>
+			</ion-segment-button >
+
+			
+
+		</ion-segment>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content  class="ion-padding">
+<div class="heart" *ngIf="selectedSegment2 =='heart'">
+<h1>
+	page Favoris
+</h1>
+
+
+</div>
+
+
+<div class="stations" *ngIf="selectedSegment2 =='stations'">
+<h1> page stations </h1>
+
+</div>
+
+
+
+<div class="itineraires" *ngIf="selectedSegment2 =='itineraires'">
+
+	<h1>page Itineraires</h1>
+ 
+
+</div>
+</ion-content>
+
+
+

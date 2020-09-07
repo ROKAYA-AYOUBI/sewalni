@@ -1,0 +1,73 @@
+<ion-app>
+  <ion-menu contentId="main-content" side="start">
+    <ion-header>
+		<ion-toolbar>
+			<div class="menu-header-bg">
+				<div class="header-content">
+					<img src="../assets/image/logo.png">
+				</div>
+		   </div>
+	    </ion-toolbar>
+	  </ion-header>
+
+    <ion-content>
+     <ion-list >
+	  		<div class="test">
+	  		<ion-menu-toggle class="menu-items">
+	  			<ion-item  routerLink="/men/home">
+	  			<ion-icon name="home" slot="start"></ion-icon>
+	  			<ion-label>Accueil</ion-label>
+	  		</ion-item>
+	  		</ion-menu-toggle>
+	  		</div>
+	  		<ion-menu-toggle class="menu-items">
+	  			<ion-item  button routerLink="/menu/parametres" >
+	  			<ion-icon name="person" slot="start"></ion-icon>
+	  			<ion-label>Paramètres</ion-label>
+	  		</ion-item>
+	  		</ion-menu-toggle>
+	  		
+	  		<ion-menu-toggle class="menu-items" >
+	  			<ion-item button (click)="CreateApropos()">
+	  			<ion-icon name="information-circle" slot="start"></ion-icon>
+	  			<ion-label>A propos</ion-label>
+	  		</ion-item>
+
+	  		
+	  		</ion-menu-toggle>
+	  		
+	  		<ion-menu-toggle class="menu-items">
+	  			<ion-item button routerLink="/menu/contactez-nous">
+	  			<ion-icon name="mail" slot="start"></ion-icon>
+	  			<ion-label>Contactez nous</ion-label>
+	  		</ion-item>
+	  		</ion-menu-toggle>
+	  		
+	  		<ion-menu-toggle class="menu-items">
+	  			<ion-item button routerLink="/menu/parlez-en-a-vous-amis">
+	  			<ion-icon name="share-social" slot="start"></ion-icon>
+	  			<ion-label>Parlez en à vos amis</ion-label>
+	  		</ion-item>
+	  		</ion-menu-toggle>
+	  		
+	  		<ion-menu-toggle class="menu-items">
+	  				<ion-item button routerLink="/menu/notez-nous">
+	  			<ion-icon name="star" slot="start"></ion-icon>
+	  			<ion-label>Notez nous</ion-label>
+	  		</ion-item>
+	  		</ion-menu-toggle>
+	  	
+	  		<ion-menu-toggle class="menu-items">
+	  			<ion-item button routerLink="/menu/aide-et-services">
+	  			<ion-icon name="help-circle" slot="start"></ion-icon>
+	  			<ion-label>Aide et services</ion-label>
+	  		</ion-item>
+	  		</ion-menu-toggle>
+	  		
+	  	</ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content" main></ion-router-outlet>
+
+</ion-app>

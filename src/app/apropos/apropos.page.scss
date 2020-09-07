@@ -1,0 +1,40 @@
+ion-content{
+	
+	
+ 	--background: #20527A;
+    mix-blend-mode: normal;
+    color:#ffff;
+    overflow:hidden;
+}
+ion-icon{
+	 position: absolute;
+	 color: #DB5827;
+
+left: 85%;
+
+bottom: 90%;
+
+
+}
+ion-chip{
+
+width: 240px;
+height: 42px;
+top:25px;
+color:#ffff;
+background: #DB5827;
+justify-content: center;
+font-size: 15px;
+
+}
+ion-col.md.hydrated{
+	padding-top:30px;
+	
+	
+}
+p {
+  width: 240px;
+  overflow: hidden;
+  color:#ffff;
+  font-size: 20px;
+}

@@ -1,5 +1,7 @@
 {
   "name": "sewalni",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
